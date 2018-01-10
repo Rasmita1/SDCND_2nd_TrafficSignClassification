@@ -7,6 +7,8 @@
 * Analyze the softmax probabilities of the new images
 * Summarize the results with a written report
 
+I could not commit the training and testing file in the samples folder as the file sizes are big. These files are available in the classroom link.
+
 # Basic summary of the data set:
 - Number of training examples = 34799
 - Number of validation examples = 4410
@@ -71,10 +73,8 @@ Roundabout mandatory: 0.00%
 Go straight or left: 0.00%
 Yield: 0.00%
 
-# (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-I have not included this portion (optional).
-
 # Conclusion:
 1. learning rate is a key factor to train the model accurately.  
+
 
 
