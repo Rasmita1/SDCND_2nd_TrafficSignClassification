@@ -14,7 +14,9 @@
 - Image data shape = (32, 32, 3)
 - Number of classes = 43
 
-# To train the model: Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
+# To train the model: 
+Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
+
 # Final model Validation Accuracy is 0.959
 
 # Test a Model on New Images
