@@ -74,7 +74,8 @@ Go straight or left: 0.00%
 Yield: 0.00%
 
 # Conclusion:
-1. learning rate is a key factor to train the model accurately.  
+1. Here the test accuracy is 100%.
+2. learning rate is a key factor to train the model accurately.  
 
 
 
