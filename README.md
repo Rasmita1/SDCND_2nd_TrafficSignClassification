@@ -19,63 +19,83 @@ I could not commit the training and testing file in the samples folder as the fi
 # To train the model: 
 Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
 
-# Final model Validation Accuracy is 0.959
+# Design and Test a Model Architecture
+The summary of Model Architecture:
+
+Layer 1: Convolution 1. Input = 32x32x3. Output =28x28x6 ->relu activation ->dropout -> Pooling. Input = 28x28x6, Output =14x14x6
+Layer 2: Convolution 2. Output =10x10x16 ->relu activation ->dropout -> Pooling. Input = 10x10x16, Output =5x5x16
+Layer 3: Fully Connected. Input =400. Output =120 ->relu activation
+Layer 4: Fully Connected. Input =120. Output =84 ->relu activation
+Layer 5: Fully Connected. Input =84. Output =43
+
+
+Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
+
+# Final model Validation Accuracy 
+ I tuned the learning factor parameter, ran the scripts couple of times to get a more accurate result.
+ This time the Final model accuracy is 0.962.  
 
 # Test a Model on New Images
-I considered seven German traffic signs found on the web and detected very well,
+Now I considered new set of six German traffic signs found on the web,
+
+Here are the results of the prediction:
+
+| Image			          |     Prediction	        					|   Remarks
+|:---------------------:|:---------------------------------------------:|
+| No entry       		  | No entry   									|
+| General caution     | General caution 										|
+| Speed limit (60km/h)| Speed limit (60km/h)							|
+| End of speed limit (80km/h)	| End of speed limit (80km/h)	|
+| Wild animals crossing  			| Wild animals crossing				|
+| Speed limit (70km/h)	| Speed limit (30km/h)							|
+| Speed limit (100km/h)			| Speed limit (120km/h)					| Image is not clear. Hence, it was hard to predict accurately
+
 
 image1.png:
 No entry: 100.00%
-Speed limit (70km/h): 0.00%
+Stop: 0.00%
 Speed limit (20km/h): 0.00%
 Speed limit (30km/h): 0.00%
-Speed limit (50km/h): 0.00%
-
-image2.png:
-Yield: 100.00%
-Priority road: 0.00%
-No passing for vehicles over 3.5 metric tons: 0.00%
-Speed limit (50km/h): 0.00%
-Ahead only: 0.00%
-
-image3.png:
-No entry: 99.75%
-Speed limit (30km/h): 0.17%
-Speed limit (50km/h): 0.05%
-Speed limit (70km/h): 0.04%
-Beware of ice/snow: 0.00%
-
-image4.jpg:
-No entry: 100.00%
-Speed limit (20km/h): 0.00%
-Speed limit (30km/h): 0.00%
-Speed limit (50km/h): 0.00%
-Speed limit (60km/h): 0.00%
-
-image5.png:
-Stop: 100.00%
-No entry: 0.00%
-No passing for vehicles over 3.5 metric tons: 0.00%
-No passing: 0.00%
-Speed limit (20km/h): 0.00%
-
-image6.png:
-Speed limit (70km/h): 96.07%
-Speed limit (50km/h): 3.93%
-Speed limit (30km/h): 0.01%
-Dangerous curve to the left: 0.00%
-Speed limit (80km/h): 0.00%
-
-image7.png:
-Keep right: 100.00%
-Turn left ahead: 0.00%
-Roundabout mandatory: 0.00%
-Go straight or left: 0.00%
 Yield: 0.00%
 
+image2.png:
+General caution: 100.00%
+Traffic signals: 0.00%
+Go straight or left: 0.00%
+Speed limit (70km/h): 0.00%
+Pedestrians: 0.00%
+
+image3.png:
+Speed limit (60km/h): 100.00%
+Speed limit (80km/h): 0.00%
+Speed limit (50km/h): 0.00%
+No passing for vehicles over 3.5 metric tons: 0.00%
+Dangerous curve to the left: 0.00%
+
+image4.png:
+End of speed limit (80km/h): 92.41%
+Speed limit (80km/h): 3.75%
+Speed limit (30km/h): 1.39%
+Dangerous curve to the right: 0.92%
+End of no passing by vehicles over 3.5 metric tons: 0.49%
+
+image5.png:
+Wild animals crossing: 100.00%
+Double curve: 0.00%
+Road work: 0.00%
+Slippery road: 0.00%
+Speed limit (80km/h): 0.00%
+
+image6.png:
+Speed limit (120km/h): 65.93%
+Speed limit (70km/h): 10.66%
+Speed limit (80km/h): 8.69%
+Speed limit (100km/h): 5.01%
+No vehicles: 1.95%
+
 # Conclusion:
-1. Here the test accuracy is 100%.
-2. learning rate is a key factor to train the model accurately.  
+1. The model correctly predicted all the images except the last image.
+  
 
 
 
