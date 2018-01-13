@@ -32,10 +32,9 @@ Layer 5: Fully Connected. Input =84. Output =43
 
 
 Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
+I Used the LeNet architecture presented in the lesson and made the neccssary modification. Traffic sign images are in color, so changed the input depth to 3 to match the 3 RGB color channels and changed the output classes to 43 as traffic sign classifier has 43 classes. Then I Used softmax_cross_entropy_with_logits to get a tensor representing the mean loss value to which I applied tf.reduce_mean to compute the mean of elements across dimensions of the result. Finally, applied minimize to the AdamOptimizer of the previous result.
 
-# Final model Validation Accuracy 
- I tuned the learning factor parameter, ran the scripts couple of times to get a more accurate result.
- This time the Final model accuracy is 0.962.  
+ I tried several combinations learning rate to get more accurate result.Final model accuracy is 0.962.  
 
 # Test a Model on New Images
 Now I considered new set of six German traffic signs found on the web. The model performs well on images in the dataset. Here the model detected all images except the last image, because the sign is dark and  not visible clearly.
