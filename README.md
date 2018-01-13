@@ -20,10 +20,12 @@ I could not commit the training and testing file in the samples folder as the fi
 Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
 
 # Design and Test a Model Architecture
+Normalization is generally considered for data preparation in machine learning. Here Normalizing features is used to have values in the same range (between -1 and 1) to use a common scale, without distorting differences in the ranges of values or losing information.
+
 The summary of Model Architecture:
 
-Layer 1: Convolution 1. Input = 32x32x3. Output =28x28x6 ->relu activation ->dropout -> Pooling. Input = 28x28x6, Output =14x14x6
-Layer 2: Convolution 2. Output =10x10x16 ->relu activation ->dropout -> Pooling. Input = 10x10x16, Output =5x5x16
+Layer 1: Convolution 1. Input = 32x32x3. Output =28x28x6 ->relu activation -> Pooling. Input = 28x28x6, Output =14x14x6
+Layer 2: Convolution 2. Output =10x10x16 ->relu activation -> Pooling. Input = 10x10x16, Output =5x5x16
 Layer 3: Fully Connected. Input =400. Output =120 ->relu activation
 Layer 4: Fully Connected. Input =120. Output =84 ->relu activation
 Layer 5: Fully Connected. Input =84. Output =43
@@ -36,7 +38,7 @@ Used 15 epochs, a batch size of 128 and a learning rate of 0.003.
  This time the Final model accuracy is 0.962.  
 
 # Test a Model on New Images
-Now I considered new set of six German traffic signs found on the web,
+Now I considered new set of six German traffic signs found on the web. The model performs well on images in the dataset. Here the model detected all images except the last image, because the sign is dark and  not visible clearly.
 
 Here are the results of the prediction:
 
